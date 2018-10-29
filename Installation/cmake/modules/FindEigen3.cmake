@@ -51,7 +51,7 @@ if (EIGEN3_INCLUDE_DIR)
     _eigen3_get_version()
     set(EIGEN3_FOUND ${EIGEN3_VERSION_OK})
 
-    find_package_handle_standard_args(Eigen3 
+    find_package_handle_standard_args(Eigen3
       REQUIRED_VARS EIGEN3_INCLUDE_DIR
       VERSION_VAR EIGEN3_VERSION)
 
@@ -77,8 +77,10 @@ else (EIGEN3_INCLUDE_DIR)
     _eigen3_get_version()
   endif(EIGEN3_INCLUDE_DIR)
 
-  find_package_handle_standard_args(Eigen3 
+  find_package_handle_standard_args(Eigen3
     REQUIRED_VARS EIGEN3_INCLUDE_DIR
     VERSION_VAR EIGEN3_VERSION)
 
 endif(EIGEN3_INCLUDE_DIR)
+
+message(FATAL_ERROR, "${EIGEN3_INCLUDE_DIR}")
